@@ -13,17 +13,19 @@ public class Cuadrado extends GeometricForm{
 
     @Override
     public void geometryInfo() {
-
+        System.out.println("Un LADO mide: " + lado + " cm");
+        System.out.println("La figura es de COLOR: " + getColor());
+        System.out.println("Tiene una coordenadas de " + getCoordenates());
     }
 
     @Override
     public double calcuArea() {
-        return 0;
+        return lado * lado;
     }
 
     @Override
     public double calcuPerimeter() {
-        return 0;
+        return 4 * lado;
     }
 
     public double getLado() {

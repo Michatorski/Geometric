@@ -5,6 +5,8 @@ import java.util.Objects;
 public class Circulo extends GeometricForm{
     private double radio;
 
+    static double pi = Math.PI;
+
     public Circulo(String color, double coordenates, double radio) {
         super(color, coordenates);
         this.radio = radio;
@@ -12,17 +14,20 @@ public class Circulo extends GeometricForm{
 
     @Override
     public void geometryInfo() {
-
+        System.out.println("Su radio mide: " + radio + " cm");
+        System.out.println("La figura es de COLOR: " + getColor());
+        System.out.println("Tiene una coordenadas de " + getCoordenates());
     }
 
     @Override
     public double calcuArea() {
-        return 0;
+
+        return pi * radio * radio;
     }
 
     @Override
     public double calcuPerimeter() {
-        return 0;
+        return 2 * pi * radio;
     }
 
     public double getRadio() {

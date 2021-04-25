@@ -15,17 +15,22 @@ public class Rectangulo extends GeometricForm{
 
     @Override
     public void geometryInfo() {
-
+        System.out.println("Un LADO mide: " + ladoA + " cm");
+        System.out.println("Un LADO mide: " + ladoB + " cm");
+        System.out.println("La figura es de COLOR: " + getColor());
+        System.out.println("Tiene una coordenadas de " + getCoordenates());
     }
 
     @Override
     public double calcuArea() {
-        return 0;
+
+        return ladoA * ladoB;
     }
 
     @Override
     public double calcuPerimeter() {
-        return 0;
+
+        return 2 * ladoA + 2 * ladoB;
     }
 
     public double getLadoA() {

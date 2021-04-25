@@ -7,16 +7,14 @@ public class Circulo extends GeometricForm{
 
     static double pi = Math.PI;
 
-    public Circulo(String color, double coordenates, double radio) {
-        super(color, coordenates);
+    public Circulo(String color, double x, double y, double radio) {
+        super(color, x, y);
         this.radio = radio;
     }
 
     @Override
-    public void geometryInfo() {
+    public void showSpecificInfo() {
         System.out.println("Su radio mide: " + radio + " cm");
-        System.out.println("La figura es de COLOR: " + getColor());
-        System.out.println("Tiene una coordenadas de " + getCoordenates());
     }
 
     @Override

@@ -7,18 +7,17 @@ public class Rectangulo extends GeometricForm{
     private double ladoA;
     private double ladoB;
 
-    public Rectangulo(String color, double coordenates, double ladoA, double ladoB) {
-        super(color, coordenates);
+    public Rectangulo(String color, double x, double y, double ladoA, double ladoB) {
+        super(color, x, y);
         this.ladoA = ladoA;
         this.ladoB = ladoB;
     }
 
     @Override
-    public void geometryInfo() {
+    public void showSpecificInfo() {
         System.out.println("Un LADO mide: " + ladoA + " cm");
         System.out.println("Un LADO mide: " + ladoB + " cm");
-        System.out.println("La figura es de COLOR: " + getColor());
-        System.out.println("Tiene una coordenadas de " + getCoordenates());
+
     }
 
     @Override

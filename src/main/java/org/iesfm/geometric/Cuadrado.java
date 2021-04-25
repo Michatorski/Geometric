@@ -6,17 +6,15 @@ public class Cuadrado extends GeometricForm{
 
     private double lado;
 
-    public Cuadrado(String color, double coordenates, double lado) {
-        super(color, coordenates);
+    public Cuadrado(String color, double x, double y, double lado) {
+        super(color, x, y);
         this.lado = lado;
     }
 
     @Override
-    public void geometryInfo() {
+    public void showSpecificInfo() {
         System.out.println("Un LADO mide: " + lado + " cm");
-        System.out.println("La figura es de COLOR: " + getColor());
-        System.out.println("Tiene una coordenadas de " + getCoordenates());
-    }
+         }
 
     @Override
     public double calcuArea() {

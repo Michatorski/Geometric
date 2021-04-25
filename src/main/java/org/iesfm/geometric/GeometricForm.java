@@ -5,14 +5,22 @@ import java.util.Objects;
 
 public abstract class GeometricForm {
     private String color;
-    private double coordenates;
+    private double x;
+    private double y;
 
-    public GeometricForm(String color, double coordenates) {
+    public GeometricForm(String color, double x, double y) {
         this.color = color;
-        this.coordenates = coordenates;
+        this.x = x;
+        this.y = y;
     }
 
-    public abstract void geometryInfo();
+    public void basicInfo(){
+        System.out.println("El color de la figura es " + color);
+        System.out.println("La coordenada X de la figura es " + x);
+        System.out.println("La coordenada Y de la figura es " + y);
+        showSpecificInfo();
+    }
+    public abstract void showSpecificInfo();
 
     public abstract double calcuArea();
 
@@ -26,12 +34,20 @@ public abstract class GeometricForm {
         this.color = color;
     }
 
-    public double getCoordenates() {
-        return coordenates;
+    public double getX() {
+        return x;
     }
 
-    public void setCoordenates(double coordenates) {
-        this.coordenates = coordenates;
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
     }
 
     @Override
@@ -39,12 +55,13 @@ public abstract class GeometricForm {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GeometricForm that = (GeometricForm) o;
-        return Double.compare(that.coordenates, coordenates) == 0 &&
+        return Double.compare(that.x, x) == 0 &&
+                Double.compare(that.y, y) == 0 &&
                 Objects.equals(color, that.color);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(color, coordenates);
+        return Objects.hash(color, x, y);
     }
 }

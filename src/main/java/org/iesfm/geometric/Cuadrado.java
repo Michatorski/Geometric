@@ -13,6 +13,7 @@ public class Cuadrado extends GeometricForm{
 
     @Override
     public void showSpecificInfo() {
+        System.out.println("Soy un CUADRADO");
         System.out.println("Un LADO mide: " + lado + " cm");
          }
 

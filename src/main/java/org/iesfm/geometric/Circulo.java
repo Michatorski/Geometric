@@ -14,6 +14,7 @@ public class Circulo extends GeometricForm{
 
     @Override
     public void showSpecificInfo() {
+        System.out.println("Soy un CIRCULO");
         System.out.println("Su radio mide: " + radio + " cm");
     }
 

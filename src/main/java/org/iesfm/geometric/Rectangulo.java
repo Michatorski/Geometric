@@ -15,6 +15,7 @@ public class Rectangulo extends GeometricForm{
 
     @Override
     public void showSpecificInfo() {
+        System.out.println("Soy un RECTANGULO");
         System.out.println("Un LADO mide: " + ladoA + " cm");
         System.out.println("Un LADO mide: " + ladoB + " cm");
 
